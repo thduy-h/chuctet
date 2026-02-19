@@ -1759,17 +1759,22 @@ body{
 .box-content .right .content .title{
     font-family: 'Dancing Script', cursive;
     width: 90%;
-    height: 40px;
+    min-height: 48px;
+    height: auto;
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: 10px;
-    overflow: hidden;
+    overflow: visible;
+    text-align: center;
 }
 .box-content .right .content .title h1{
-    /* margin-top: -40px; */
+    margin: 0;
+    line-height: 1.3;
     transition: 0.5s;
 }
-.slider3:hover .title h1{
+.slider3:hover .title h1,
+.slider3.active .title h1{
     animation: title 2s forwards;
 }
 @keyframes title{
@@ -1789,7 +1794,8 @@ body{
     opacity: 0;
     transition: 1s;
 }
-.slider3:hover .content p{
+.slider3:hover .content p,
+.slider3.active .content p{
     animation: bodyContent 2s 1s forwards;
 }
 @keyframes bodyContent{
@@ -1812,7 +1818,8 @@ body{
     padding: 20px 0px 0px 20px;
     margin-top: -50px;
 }
-.slider3:hover .content h3{
+.slider3:hover .content h3,
+.slider3.active .content h3{
     animation: fixedContent 2s 2s forwards;
 }
 @keyframes fixedContent{
@@ -2080,10 +2087,12 @@ body{
     left: 100px;
 }
 .slider3 .right .content .title{
-    height: 25px;
+    min-height: 40px;
+    height: auto;
 }
 .slider3 .right .content h1{
-    font-size: 20px;
+    font-size: 18px;
+    line-height: 1.3;
 }
 .box-content .right .content p{
     font-size: 15px;
