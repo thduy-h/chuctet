@@ -1414,17 +1414,20 @@ body{
     transform: scale(0);
 }
 .mail button{
-    padding: 10px 15px;
+    padding: 10px 12px;
     background-color: rgb(199,37,68);
     border: none;
-    font-size: 25px;
+    font-size: 16px;
     border-radius: 4px 0px 0px 4px;
     transition: 0.5s;
-    width: 58px;
+    width: auto;
+    min-width: 96px;
     height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 6px;
+    white-space: nowrap;
     cursor: pointer;
     color: #fff;
 }
